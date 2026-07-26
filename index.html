@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christina Lugo | Entry-Level IT Support Professional</title>
     <style>
-        /* Warm Neutral & Professional Slate Palette */
+        /* Warm Neutral Palette */
         :root {
-            --bg-color: #955251;          /* Light slate blue-gray background */
-            --card-bg: #ffffff;          /* Clean white card background */
-            --header-bg: #C58B88;        /* Deep slate navy header */
+            --bg-color: #955251;          /* Marsala outer page background */
+            --card-bg: #ffffff;          /* Standard clean white card background */
+            --header-bg: #C58B88;        /* Brandied Apricot header */
             --header-text: #ffffff;
             --text-main: #334155;        /* Soft charcoal text */
             --text-muted: #64748b;       /* Muted gray text */
-            --accent-color: #2563eb;     /* Professional blue accent */
-            --accent-soft: #eff6ff;      /* Subtle blue badge background */
-            --border-color: #e2e8f0;     /* Soft border line */
+            --accent-color: #955251;     /* Marsala section accents */
+            --accent-soft: #fbf3f2;      /* Subtle warm tint for badges */
+            --border-color: #e8d3d1;     /* Soft warm border line */
+            --alt-card-bg: #fdf8f7;      /* Warm light tint for alternating cards */
         }
 
         body {
@@ -50,15 +51,17 @@
 
         .subtitle {
             font-size: 1.15em;
-            color: #93c5fd;
+            color: #ffffff;
             font-weight: 500;
             margin-top: 8px;
+            opacity: 0.9;
         }
 
         .contact-info {
             margin-top: 15px;
             font-size: 0.95em;
-            color: #cbd5e1;
+            color: #ffffff;
+            opacity: 0.95;
         }
 
         .contact-info a {
@@ -66,6 +69,7 @@
             text-decoration: underline;
         }
 
+        /* Base section styling */
         section {
             background-color: var(--card-bg);
             padding: 28px;
@@ -75,17 +79,24 @@
             border: 1px solid var(--border-color);
         }
 
+        /* Automatic alternating background card depth */
+        section:nth-of-type(even) {
+            background-color: var(--alt-card-bg);
+            border-color: #ebd7d5;
+            box-shadow: inset 0 0 0 1px rgba(149, 82, 81, 0.05), 0 2px 8px rgba(0,0,0,0.04);
+        }
+
         h2 {
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 8px;
             margin-top: 0;
-            color: var(--header-bg);
+            color: var(--accent-color);
             font-size: 1.35em;
         }
 
         h3 {
             margin-bottom: 10px;
-            color: var(--header-bg);
+            color: var(--accent-color);
             font-size: 1.1em;
         }
 
@@ -113,7 +124,7 @@
             background: var(--accent-soft);
             padding: 12px;
             border-radius: 8px;
-            border: 1px solid #dbeafe;
+            border: 1px solid var(--border-color);
         }
 
         .badge-card img {
@@ -130,7 +141,7 @@
         .badge-details h4 {
             margin: 0 0 3px 0;
             font-size: 0.9em;
-            color: var(--header-bg);
+            color: var(--accent-color);
         }
 
         .badge-details p {
@@ -154,7 +165,8 @@
         footer {
             text-align: center;
             font-size: 0.85em;
-            color: var(--text-muted);
+            color: #ffffff;
+            opacity: 0.8;
             margin-top: 35px;
         }
     </style>
@@ -174,7 +186,7 @@
         </div>
     </header>
 
-    <!-- Professional Summary -->
+    <!-- Section 1: Clean White -->
     <section>
         <h2>About Me</h2>
         <p>
@@ -182,7 +194,7 @@
         </p>
     </section>
 
-    <!-- Education & Certifications -->
+    <!-- Section 2: Warm Tinted Alternating Background -->
     <section>
         <h2>Education & Certifications</h2>
         <ul>
@@ -193,7 +205,6 @@
 
         <h3 style="margin-top: 20px;">Badges & Achievements</h3>
         <div class="badges-grid">
-            <!-- Cisco Badge 1 -->
             <div class="badge-card">
                 <img src="it-essentials.png" alt="Cisco IT Essentials Badge">
                 <div class="badge-details">
@@ -202,7 +213,6 @@
                 </div>
             </div>
 
-            <!-- Cisco Badge 2 -->
             <div class="badge-card">
                 <img src="computer-hardware-basics.png" alt="Cisco Computer Hardware Basics Badge">
                 <div class="badge-details">
@@ -211,7 +221,6 @@
                 </div>
             </div>
 
-            <!-- Cisco Badge 3 -->
             <div class="badge-card">
                 <img src="creating-compelling-reports.png" alt="Cisco Creating Compelling Reports Badge">
                 <div class="badge-details">
@@ -222,7 +231,7 @@
         </div>
     </section>
 
-    <!-- Technical & Interpersonal Skills -->
+    <!-- Section 3: Clean White -->
     <section>
         <h2>Skills</h2>
         <div class="skills-grid">
@@ -247,7 +256,7 @@
         </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Section 4: Warm Tinted Alternating Background -->
     <section>
         <h2>Experience</h2>
         <div>
@@ -261,7 +270,7 @@
         </div>
     </section>
 
-    <!-- Interests -->
+    <!-- Section 5: Clean White -->
     <section>
         <h2>Hands-On Interests</h2>
         <p>
