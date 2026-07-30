@@ -117,6 +117,17 @@
             margin-top: 15px;
         }
 
+        .badge-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .badge-link:hover {
+            transform: translateY(-2px);
+        }
+
         .badge-card {
             display: flex;
             align-items: center;
@@ -125,6 +136,8 @@
             padding: 12px;
             border-radius: 8px;
             border: 1px solid var(--border-color);
+            height: 100%;
+            box-sizing: border-box;
         }
 
         .badge-card img {
@@ -198,6 +211,7 @@
     <section>
         <h2>Education & Certifications</h2>
         <ul>
+            <li><strong>Google AI Essentials Specialization</strong> – Google / Coursera (Completed July 2026)</li>
             <li><strong>CompTIA A+ Certification Training</strong> – Currently Enrolled, Per Scholas</li>
             <li><strong>Get Started with Microsoft 365 Copilot</strong> – Microsoft Learn (Completed July 2026)</li>
             <li><strong>High School Diploma</strong> – Brooklyn, NY</li>
@@ -205,6 +219,16 @@
 
         <h3 style="margin-top: 20px;">Badges & Achievements</h3>
         <div class="badges-grid">
+            <a href="https://coursera.org/verify/specialization/W954ZKOZQ7DW" target="_blank" class="badge-link">
+                <div class="badge-card">
+                    <img src="google-ai-essentials.png" alt="Google AI Essentials Badge">
+                    <div class="badge-details">
+                        <h4>Google AI Essentials</h4>
+                        <p>Google / Coursera</p>
+                    </div>
+                </div>
+            </a>
+
             <div class="badge-card">
                 <img src="it-essentials.png" alt="Cisco IT Essentials Badge">
                 <div class="badge-details">
