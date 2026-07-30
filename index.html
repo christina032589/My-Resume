@@ -163,6 +163,54 @@
             color: var(--text-muted);
         }
 
+        /* Project Tag Badges */
+        .project-tag {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: var(--accent-color);
+            border: 1px solid var(--border-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 6px;
+            margin-bottom: 8px;
+        }
+
+        /* Expandable Details Styling */
+        details {
+            margin-top: 15px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+        }
+
+        summary {
+            font-weight: 600;
+            color: var(--accent-color);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        summary:hover {
+            text-decoration: underline;
+        }
+
+        .details-content {
+            margin-top: 15px;
+            font-size: 0.92em;
+            color: var(--text-main);
+        }
+
+        .details-content pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 0.85em;
+        }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -255,7 +303,44 @@
         </div>
     </section>
 
-    <!-- Section 3: Clean White -->
+    <!-- Section 3: Featured Projects & Practical Simulations -->
+    <section>
+        <h2>Featured Projects & AI Simulations</h2>
+        <div>
+            <h3>DDoS Incident Response & AI Collaboration Simulation</h3>
+            <div>
+                <span class="project-tag">Log Analysis</span>
+                <span class="project-tag">Network Security</span>
+                <span class="project-tag">Prompt Engineering</span>
+                <span class="project-tag">Incident Response</span>
+            </div>
+            <p style="margin-top: 8px;">
+                Simulated a live Junior Network Engineer response to a TCP SYN Flood DDoS attack targeting game infrastructure. Used Generative AI to rapidly parse firewall/flow logs, accelerate response planning, and design an actionable 3-day mitigation roadmap.
+            </p>
+            <ul>
+                <li><strong>Log Anomaly Identification:</strong> Recognized TCP SYN flag ([S]) floods originating from distributed IPs at 14,000–21,000 packets/sec on port 80.</li>
+                <li><strong>Human-in-the-Loop Optimization:</strong> Refined raw AI output to add enterprise-level technical mitigations (SYN cookies, BGP RTBH, cloud scrubbing) and Cisco/Linux CLI block rules.</li>
+                <li><strong>Resource & Operations Management:</strong> Iteratively prompted AI to construct a 3-day team timeline delegating tasks across 10 engineers, alongside player morale & communication strategies.</li>
+                <li><strong>Efficiency Impact:</strong> Estimated 2–3 hours saved during incident analysis by leveraging AI for initial triage while validating outputs with core networking knowledge.</li>
+            </ul>
+
+            <details>
+                <summary>Click to view full prompt logs & reflection report</summary>
+                <div class="details-content">
+                    <h4>Prompting Strategy & Iteration Log</h4>
+                    <p><strong>Prompt 1 (Initial Analysis):</strong> Directed AI as a Junior Network Engineer to analyze raw TCP flow logs, identify attack anomalies, evaluate bandwidth/resource impact, and propose immediate CLI fixes.</p>
+                    <p><strong>Prompt 2 (Refinement & Operations):</strong> Iterated on basic AI output to expand mitigation steps (SYN cookies, BGP blackholing, Cloud scrubbing), build a 10-engineer 3-day response schedule, and draft player morale protection plans.</p>
+                    
+                    <h4>Reflection & Efficiency Gain</h4>
+                    <p>
+                        Utilizing AI for log parsing saved an estimated 2 to 3 hours of manual log review. While AI generated a fast baseline draft, technical human oversight was critical to ensure firewall commands, team allocations, and enterprise network architecture were realistic and accurate.
+                    </p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Section 4: Clean White -->
     <section>
         <h2>Skills</h2>
         <div class="skills-grid">
@@ -280,7 +365,7 @@
         </div>
     </section>
 
-    <!-- Section 4: Warm Tinted Alternating Background -->
+    <!-- Section 5: Warm Tinted Alternating Background -->
     <section>
         <h2>Experience</h2>
         <div>
@@ -294,7 +379,7 @@
         </div>
     </section>
 
-    <!-- Section 5: Clean White -->
+    <!-- Section 6: Clean White -->
     <section>
         <h2>Hands-On Interests</h2>
         <p>
