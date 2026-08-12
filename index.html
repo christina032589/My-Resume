@@ -193,12 +193,14 @@
             color: #334155;
         }
 
-        .details-content pre {
-            background: #f4f4f4;
-            padding: 10px;
+        /* Image styling inside dropdowns */
+        .details-content img {
+            max-width: 100%;
+            height: auto;
             border-radius: 6px;
-            overflow-x: auto;
-            font-size: 0.85em;
+            border: 1px solid #e8d3d1;
+            margin-top: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
         }
 
         .skills-grid {
@@ -367,6 +369,37 @@
 
         <hr style="border: 0; border-top: 1px solid #e8d3d1; margin: 25px 0;">
 
+        <!-- Power Supply Unit (PSU) Diagram Lab -->
+        <div style="margin-bottom: 25px;">
+            <h3>Power Supply Unit (PSU) Architecture & Pinout Presentation Lab</h3>
+            <div>
+                <span class="project-tag">Hardware Architecture</span>
+                <span class="project-tag">PSU Pinouts</span>
+                <span class="project-tag">Voltage Regulation</span>
+                <span class="project-tag">Technical Presentation</span>
+                <span class="project-tag">Team Collaboration</span>
+            </div>
+            <p style="margin-top: 8px;">
+                Collaborated with a technical group to research, map, and present power supply unit (PSU) architecture, connector pinouts, and voltage delivery rails for desktop computing environments.
+            </p>
+            <ul>
+                <li><strong>PSU Pinout Analysis:</strong> Mapped standard 24-pin ATX motherboard power connectors, 4/8-pin CPU power rail specs, and PCIe expansion power lines.</li>
+                <li><strong>Voltage Rails & Specs:</strong> Documented target voltage tolerances (+3.3V, +5V, +12V) and safety protocols for power testing and troubleshooting.</li>
+                <li><strong>Visual Diagramming & Slides:</strong> Created structured technical presentation slides detailing PSU cabling, modular configurations, and form factor standards.</li>
+            </ul>
+
+            <details>
+                <summary>Click to view PSU diagram & presentation preview</summary>
+                <div class="details-content">
+                    <h4>PSU Architecture Diagram</h4>
+                    <p><em>Make sure you upload `psu-diagram.png` to your GitHub repo to render this image:</em></p>
+                    <img src="psu-diagram.png" alt="PSU Architecture Diagram & Pinout Specification">
+                </div>
+            </details>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #e8d3d1; margin: 25px 0;">
+
         <!-- Network Diagramming Project -->
         <div>
             <h3>Network Architecture & Diagramming Lab (IPLab 132.4.2)</h3>
@@ -390,10 +423,9 @@
             <details>
                 <summary>Click to view diagram & design reflection</summary>
                 <div class="details-content">
-                    <h4>Design & Diagram Notes</h4>
-                    <p>
-                        Visualized network interfaces and connectivity across routers, switches, and endpoints. Focused on clean documentation and accurate IP scheme planning to simplify troubleshooting and infrastructure expansion.
-                    </p>
+                    <h4>Network Topology Diagram</h4>
+                    <p><em>Make sure you upload `iplab-diagram.png` to your GitHub repo to render this image:</em></p>
+                    <img src="iplab-diagram.png" alt="IPLab Network Architecture Diagram">
                 </div>
             </details>
         </div>
