@@ -194,6 +194,14 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.06);
         }
 
+        .pdf-viewer {
+            width: 100%;
+            height: 450px;
+            border: 1px solid #e8d3d1;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -355,10 +363,14 @@
                         Divided tasks effectively between physical disassembly, component specification logging, and diagnostic testing. Documented each step of the build to ensure proper re-cabling and component integrity.
                     </p>
                     <h4>Lab Presentation & Documentation</h4>
-                    <p>Access our team's full presentation slides:</p>
-                    <p style="margin-top: 12px;">
-                        <a href="pc-teardown-lab.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #955251; color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; font-size: 0.9em;">
-                            📄 View PC Teardown Lab Presentation (PDF)
+                    <p>View presentation embedded below or open directly:</p>
+
+                    <!-- Embedded PDF Viewer -->
+                    <iframe src="pc-teardown-lab.pdf" class="pdf-viewer"></iframe>
+
+                    <p style="margin-top: 10px;">
+                        <a href="pc-teardown-lab.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #955251; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-weight: 600; font-size: 0.85em;">
+                            ↗ Open PDF in New Tab
                         </a>
                     </p>
                 </div>
@@ -390,11 +402,14 @@
                 <summary>Click to view PSU presentation & documentation</summary>
                 <div class="details-content">
                     <h4>PSU Architecture Presentation</h4>
-                    <p>Access our team's full presentation slides and connector diagrams:</p>
-                    <p style="margin-top: 12px;">
-                        <!-- UPDATED EXACT LINK TO YOUR REPO FILE -->
-                        <a href="psu-diagram.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #955251; color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; font-size: 0.9em;">
-                            📄 View PSU Architecture Diagram (PDF)
+                    <p>View presentation embedded below or open directly:</p>
+
+                    <!-- Embedded PDF Viewer -->
+                    <iframe src="psu-diagram.pdf" class="pdf-viewer"></iframe>
+
+                    <p style="margin-top: 10px;">
+                        <a href="psu-diagram.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #955251; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-weight: 600; font-size: 0.85em;">
+                            ↗ Open PDF in New Tab
                         </a>
                     </p>
                 </div>
