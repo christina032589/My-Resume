@@ -3,78 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christina Lugo - Resume</title>
+    <title>Christina Lugo | Entry-Level IT Support Professional</title>
     <style>
-        /* Base styles matching your existing layout */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+        /* Warm Neutral Palette */
+        :root {
+            --bg-color: #955251;          /* Marsala outer page background */
+            --card-bg: #ffffff;          /* Standard clean white card background */
+            --header-bg: #C58B88;        /* Brandied Apricot header */
+            --header-text: #ffffff;
+            --text-main: #334155;        /* Soft charcoal text */
+            --text-muted: #64748b;       /* Muted gray text */
+            --accent-color: #955251;     /* Marsala section accents */
+            --accent-soft: #fbf3f2;      /* Subtle warm tint for badges */
+            --border-color: #e8d3d1;     /* Soft warm border line */
+            --alt-card-bg: #fdf8f7;      /* Warm light tint for alternating cards */
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
         header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 15px;
             margin-bottom: 25px;
         }
-        h1 { margin-bottom: 5px; }
-        h2 {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-            color: #2c3e50;
-            margin-top: 30px;
+
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+            letter-spacing: -0.5px;
         }
-        .project-card {
-            background: #fff;
-            padding: 18px;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+
+        .subtitle {
+            font-size: 1.15em;
+            color: #ffffff;
+            font-weight: 500;
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.95em;
+            color: #ffffff;
+            opacity: 0.95;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Base section styling */
+        section {
+            background-color: var(--card-bg);
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             margin-bottom: 20px;
+            border: 1px solid var(--border-color);
         }
-        .skill-tags {
-            margin: 8px 0 12px 0;
+
+        /* Automatic alternating background card depth */
+        section:nth-of-type(even) {
+            background-color: var(--alt-card-bg);
+            border-color: #ebd7d5;
+            box-shadow: inset 0 0 0 1px rgba(149, 82, 81, 0.05), 0 2px 8px rgba(0,0,0,0.04);
         }
-        .skill-tags span {
-            background: #e1f5fe;
-            color: #0277bd;
-            font-size: 0.85rem;
-            padding: 3px 8px;
-            border-radius: 4px;
-            margin-right: 5px;
+
+        h2 {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 0;
+            color: var(--accent-color);
+            font-size: 1.35em;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            color: var(--accent-color);
+            font-size: 1.1em;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Badge Grid Layout */
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .badge-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .badge-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .badge-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--accent-soft);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .badge-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 6px;
+            object-fit: contain;
+            background-color: #ffffff;
+            padding: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .badge-details h4 {
+            margin: 0 0 3px 0;
+            font-size: 0.9em;
+            color: var(--accent-color);
+        }
+
+        .badge-details p {
+            margin: 0;
+            font-size: 0.8em;
+            color: var(--text-muted);
+        }
+
+        /* Project Tag Badges */
+        .project-tag {
             display: inline-block;
-            margin-bottom: 4px;
-        }
-        details {
-            margin-top: 10px;
-            background: #f1f8e9;
-            padding: 10px;
+            background: var(--accent-soft);
+            color: var(--accent-color);
+            border: 1px solid var(--border-color);
+            padding: 2px 8px;
             border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-right: 6px;
+            margin-bottom: 8px;
         }
+
+        /* Expandable Details Styling */
+        details {
+            margin-top: 15px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 16px;
+        }
+
         summary {
+            font-weight: 600;
+            color: var(--accent-color);
             cursor: pointer;
-            font-weight: bold;
-            color: #33691e;
+            user-select: none;
         }
-        a { color: #0277bd; }
+
+        summary:hover {
+            text-decoration: underline;
+        }
+
+        .details-content {
+            margin-top: 15px;
+            font-size: 0.92em;
+            color: var(--text-main);
+        }
+
+        .details-content pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-size: 0.85em;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h4 {
+            margin: 0 0 10px 0;
+            color: var(--accent-color);
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.85em;
+            color: #ffffff;
+            opacity: 0.8;
+            margin-top: 35px;
+        }
     </style>
 </head>
 <body>
 
-<div>
+<div class="container">
+
+    <!-- Header Section -->
     <header>
         <h1>Christina Lugo</h1>
-        <div>Aspiring IT Support Specialist</div>
-        <div>
+        <div class="subtitle">Aspiring IT Support Specialist</div>
+        <div class="contact-info">
             Levittown, PA | 
             <a href="mailto:lugo.christina.m@gmail.com">Email Me</a> | 
             <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a>
         </div>
     </header>
 
+    <!-- Section 1: Clean White -->
     <section>
         <h2>About Me</h2>
         <p>
@@ -82,8 +255,9 @@
         </p>
     </section>
 
+    <!-- Section 2: Warm Tinted Alternating Background -->
     <section>
-        <h2>Education &amp; Certifications</h2>
+        <h2>Education & Certifications</h2>
         <ul>
             <li><strong>Google AI Essentials Specialization</strong> – Google / Coursera (Completed July 2026)</li>
             <li><strong>CompTIA A+ Certification Training</strong> – Currently Enrolled, Per Scholas</li>
@@ -91,37 +265,37 @@
             <li><strong>High School Diploma</strong> – Brooklyn, NY</li>
         </ul>
 
-        <h3>Badges &amp; Achievements</h3>
-        <div>
-            <a href="https://coursera.org/verify/specialization/W954ZKOZQ7DW" target="_blank">
-                <div>
-                    <img alt="Google AI Essentials Badge" src="google-ai-essentials.png">
-                    <div>
+        <h3 style="margin-top: 20px;">Badges & Achievements</h3>
+        <div class="badges-grid">
+            <a href="https://coursera.org/verify/specialization/W954ZKOZQ7DW" target="_blank" class="badge-link">
+                <div class="badge-card">
+                    <img src="google-ai-essentials.png" alt="Google AI Essentials Badge">
+                    <div class="badge-details">
                         <h4>Google AI Essentials</h4>
                         <p>Google / Coursera</p>
                     </div>
                 </div>
             </a>
 
-            <div>
-                <img alt="Cisco IT Essentials Badge" src="it-essentials.png">
-                <div>
+            <div class="badge-card">
+                <img src="it-essentials.png" alt="Cisco IT Essentials Badge">
+                <div class="badge-details">
                     <h4>IT Essentials</h4>
                     <p>Cisco Networking Academy</p>
                 </div>
             </div>
 
-            <div>
-                <img alt="Cisco Computer Hardware Basics Badge" src="computer-hardware-basics.png">
-                <div>
+            <div class="badge-card">
+                <img src="computer-hardware-basics.png" alt="Cisco Computer Hardware Basics Badge">
+                <div class="badge-details">
                     <h4>Computer Hardware Basics</h4>
                     <p>Cisco Networking Academy</p>
                 </div>
             </div>
 
-            <div>
-                <img alt="Cisco Creating Compelling Reports Badge" src="creating-compelling-reports.png">
-                <div>
+            <div class="badge-card">
+                <img src="creating-compelling-reports.png" alt="Cisco Creating Compelling Reports Badge">
+                <div class="badge-details">
                     <h4>Creating Compelling Reports</h4>
                     <p>Cisco Networking Academy</p>
                 </div>
@@ -129,36 +303,37 @@
         </div>
     </section>
 
+    <!-- Section 3: Featured Projects & Practical Simulations -->
     <section>
-        <h2>Featured Projects &amp; AI Simulations</h2>
+        <h2>Featured Projects & AI Simulations</h2>
         
-        <!-- PROJECT 1: DDoS Incident Response -->
-        <div class="project-card">
-            <h3>DDoS Incident Response &amp; AI Collaboration Simulation</h3>
-            <div class="skill-tags">
-                <span>Log Analysis</span>
-                <span>Network Security</span>
-                <span>Prompt Engineering</span>
-                <span>Incident Response</span>
+        <!-- DDoS Project -->
+        <div style="margin-bottom: 25px;">
+            <h3>DDoS Incident Response & AI Collaboration Simulation</h3>
+            <div>
+                <span class="project-tag">Log Analysis</span>
+                <span class="project-tag">Network Security</span>
+                <span class="project-tag">Prompt Engineering</span>
+                <span class="project-tag">Incident Response</span>
             </div>
-            <p>
+            <p style="margin-top: 8px;">
                 Simulated a live Junior Network Engineer response to a TCP SYN Flood DDoS attack targeting game infrastructure. Used Generative AI to rapidly parse firewall/flow logs, accelerate response planning, and design an actionable 3-day mitigation roadmap.
             </p>
             <ul>
                 <li><strong>Log Anomaly Identification:</strong> Recognized TCP SYN flag ([S]) floods originating from distributed IPs at 14,000–21,000 packets/sec on port 80.</li>
                 <li><strong>Human-in-the-Loop Optimization:</strong> Refined raw AI output to add enterprise-level technical mitigations (SYN cookies, BGP RTBH, cloud scrubbing) and Cisco/Linux CLI block rules.</li>
-                <li><strong>Resource &amp; Operations Management:</strong> Iteratively prompted AI to construct a 3-day team timeline delegating tasks across 10 engineers, alongside player morale &amp; communication strategies.</li>
+                <li><strong>Resource & Operations Management:</strong> Iteratively prompted AI to construct a 3-day team timeline delegating tasks across 10 engineers, alongside player morale & communication strategies.</li>
                 <li><strong>Efficiency Impact:</strong> Estimated 2–3 hours saved during incident analysis by leveraging AI for initial triage while validating outputs with core networking knowledge.</li>
             </ul>
 
             <details>
-                <summary>Click to view full prompt logs &amp; reflection report</summary>
-                <div>
-                    <h4>Prompting Strategy &amp; Iteration Log</h4>
+                <summary>Click to view full prompt logs & reflection report</summary>
+                <div class="details-content">
+                    <h4>Prompting Strategy & Iteration Log</h4>
                     <p><strong>Prompt 1 (Initial Analysis):</strong> Directed AI as a Junior Network Engineer to analyze raw TCP flow logs, identify attack anomalies, evaluate bandwidth/resource impact, and propose immediate CLI fixes.</p>
-                    <p><strong>Prompt 2 (Refinement &amp; Operations):</strong> Iterated on basic AI output to expand mitigation steps (SYN cookies, BGP blackholing, Cloud scrubbing), build a 10-engineer 3-day response schedule, and draft player morale protection plans.</p>
+                    <p><strong>Prompt 2 (Refinement & Operations):</strong> Iterated on basic AI output to expand mitigation steps (SYN cookies, BGP blackholing, Cloud scrubbing), build a 10-engineer 3-day response schedule, and draft player morale protection plans.</p>
                     
-                    <h4>Reflection &amp; Efficiency Gain</h4>
+                    <h4>Reflection & Efficiency Gain</h4>
                     <p>
                         Utilizing AI for log parsing saved an estimated 2 to 3 hours of manual log review. While AI generated a fast baseline draft, technical human oversight was critical to ensure firewall commands, team allocations, and enterprise network architecture were realistic and accurate.
                     </p>
@@ -166,31 +341,33 @@
             </details>
         </div>
 
-        <!-- PROJECT 2: Desktop System Teardown & Reassembly Lab -->
-        <div class="project-card">
-            <h3>In-Person PC Teardown &amp; Hardware Reassembly Lab</h3>
-            <div class="skill-tags">
-                <span>Hardware Diagnostics</span>
-                <span>PC Assembly</span>
-                <span>ESD Safety</span>
-                <span>BIOS Verification</span>
-                <span>Team Collaboration</span>
+        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 25px 0;">
+
+        <!-- PC Teardown Project -->
+        <div style="margin-bottom: 25px;">
+            <h3>In-Person PC Teardown & Hardware Reassembly Lab</h3>
+            <div>
+                <span class="project-tag">Hardware Diagnostics</span>
+                <span class="project-tag">PC Assembly</span>
+                <span class="project-tag">ESD Safety</span>
+                <span class="project-tag">BIOS Verification</span>
+                <span class="project-tag">Team Collaboration</span>
             </div>
-            <p>
+            <p style="margin-top: 8px;">
                 Collaborated in a technical workgroup to perform a complete hardware disassembly, component inspection, and full reassembly of desktop computers in a live lab environment.
             </p>
             <ul>
-                <li><strong>ESD &amp; Pre-Check Protocols:</strong> Enforced electro-static discharge (ESD) safety guidelines using anti-static wrist straps and verified baseline system power prior to disassembly.</li>
-                <li><strong>Component Identification &amp; Care:</strong> Systematically removed and inspected core components—including CPU, RAM, storage drives, power supply unit (PSU), and motherboard.</li>
+                <li><strong>ESD & Pre-Check Protocols:</strong> Enforced electro-static discharge (ESD) safety guidelines using anti-static wrist straps and verified baseline system power prior to disassembly.</li>
+                <li><strong>Component Identification & Care:</strong> Systematically removed and inspected core components—including CPU, RAM, storage drives, power supply unit (PSU), and motherboard.</li>
                 <li><strong>Precision Reassembly:</strong> Reinstalled components according to manufacturer specification, ensuring correct cable routing, pin alignment, and seating for all expansion hardware.</li>
-                <li><strong>POST &amp; System Verification:</strong> Booted assembled systems to confirm Power-On Self-Test (POST) success and navigated BIOS/UEFI settings to verify hardware detection.</li>
+                <li><strong>POST & System Verification:</strong> Booted assembled systems to confirm Power-On Self-Test (POST) success and navigated BIOS/UEFI settings to verify hardware detection.</li>
             </ul>
 
             <details>
-                <summary>Click to view team workflow &amp; safety summary</summary>
-                <div>
-                    <h4>Team Dynamics &amp; Lab Workflow</h4>
-                    <p><strong>Workgroup Pair:</strong> Mikail &amp; Christina</p>
+                <summary>Click to view team workflow & safety summary</summary>
+                <div class="details-content">
+                    <h4>Team Dynamics & Lab Workflow</h4>
+                    <p><strong>Workgroup Pair:</strong> Mikail & Christina</p>
                     <p>
                         Divided tasks effectively between physical disassembly, component specification logging, and diagnostic testing. Documented each step of the build to ensure proper re-cabling and component integrity.
                     </p>
@@ -198,68 +375,71 @@
             </details>
         </div>
 
-        <!-- PROJECT 3: Network Architecture & IP Addressing Lab -->
-        <div class="project-card">
-            <h3>Network Architecture &amp; Diagramming Lab (IPLab 132.4.2)</h3>
-            <div class="skill-tags">
-                <span>Network Diagramming</span>
-                <span>IP Addressing</span>
-                <span>Subnetting</span>
-                <span>Infrastructure Setup</span>
-                <span>Technical Documentation</span>
+        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 25px 0;">
+
+        <!-- Network Diagramming Project -->
+        <div>
+            <h3>Network Architecture & Diagramming Lab (IPLab 132.4.2)</h3>
+            <div>
+                <span class="project-tag">Network Diagramming</span>
+                <span class="project-tag">IP Addressing</span>
+                <span class="project-tag">Subnetting</span>
+                <span class="project-tag">Infrastructure Setup</span>
+                <span class="project-tag">Technical Documentation</span>
             </div>
-            <p>
+            <p style="margin-top: 8px;">
                 Worked with a collaborative technical team to design, map, and document network topologies and IP addressing schemes based on functional lab specifications.
             </p>
             <ul>
-                <li><strong>Topology Design &amp; Mapping:</strong> Analyzed network requirements and developed clear visual architectural diagrams illustrating device connections and traffic flow.</li>
+                <li><strong>Topology Design & Mapping:</strong> Analyzed network requirements and developed clear visual architectural diagrams illustrating device connections and traffic flow.</li>
                 <li><strong>IP Addressing Allocation:</strong> Assigned static and dynamic IP addressing schemes to ensure proper subnet segmenting and network connectivity.</li>
                 <li><strong>Technical Documentation:</strong> Documented network configuration parameters, interface mapping, and topology diagrams for group presentation and verification.</li>
                 <li><strong>Group Collaboration:</strong> Partnered with team members to peer-review network layouts and validate system design against lab criteria.</li>
             </ul>
 
             <details>
-                <summary>Click to view diagram &amp; design reflection</summary>
-                <div>
-                    <h4>Design &amp; Diagram Notes</h4>
+                <summary>Click to view diagram & design reflection</summary>
+                <div class="details-content">
+                    <h4>Design & Diagram Notes</h4>
                     <p>
                         Visualized network interfaces and connectivity across routers, switches, and endpoints. Focused on clean documentation and accurate IP scheme planning to simplify troubleshooting and infrastructure expansion.
                     </p>
                 </div>
             </details>
         </div>
-
     </section>
 
+    <!-- Section 4: Clean White -->
     <section>
         <h2>Skills</h2>
-        <div>
-            <div>
-                <h4>Technical &amp; Systems</h4>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Technical & Systems</h4>
                 <ul>
-                    <li>PC Building &amp; Hardware Setup</li>
+                    <li>PC Building & Hardware Setup</li>
                     <li>Microsoft Office / Google Workspace</li>
                     <li>Basic Operating System Troubleshooting</li>
-                    <li>POS Systems &amp; Software Basics</li>
+                    <li>POS Systems & Software Basics</li>
                 </ul>
             </div>
-            <div>
-                <h4>Support &amp; Interpersonal</h4>
+            <div class="skill-category">
+                <h4>Support & Interpersonal</h4>
                 <ul>
-                    <li>Customer Service &amp; Active Listening</li>
-                    <li>Conflict Resolution &amp; Calm Problem-Solving</li>
-                    <li>Team Collaboration &amp; Multitasking</li>
-                    <li>Adaptability &amp; Quick Learning</li>
+                    <li>Customer Service & Active Listening</li>
+                    <li>Conflict Resolution & Calm Problem-Solving</li>
+                    <li>Team Collaboration & Multitasking</li>
+                    <li>Adaptability & Quick Learning</li>
                 </ul>
             </div>
         </div>
     </section>
 
+    <!-- Section 5: Warm Tinted Alternating Background -->
     <section>
         <h2>Experience</h2>
         <div>
             <h3>Server / Hospitality Professional</h3>
-            <p>2015 – Present</p>
+            <p style="color: var(--text-muted); font-size: 0.9em; margin-top: -10px;">2015 – Present</p>
             <ul>
                 <li>Delivered exceptional customer support in fast-paced environments, resolving client concerns with empathy and clear communication.</li>
                 <li>Operated POS hardware and digital entry platforms while handling transactions accurately under pressure.</li>
@@ -268,6 +448,7 @@
         </div>
     </section>
 
+    <!-- Section 6: Clean White -->
     <section>
         <h2>Hands-On Interests</h2>
         <p>
@@ -276,7 +457,7 @@
     </section>
 
     <footer>
-        <p>© 2026 Christina Lugo. Built for GitHub Pages.</p>
+        <p>&copy; 2026 Christina Lugo. Built for GitHub Pages.</p>
     </footer>
 
 </div>
