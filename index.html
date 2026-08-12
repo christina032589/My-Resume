@@ -5,25 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christina Lugo | Entry-Level IT Support Professional</title>
     <style>
-        /* Warm Neutral Palette */
-        :root {
-            --bg-color: #955251;          /* Marsala outer page background */
-            --card-bg: #ffffff;          /* Standard clean white card background */
-            --header-bg: #C58B88;        /* Brandied Apricot header */
-            --header-text: #ffffff;
-            --text-main: #334155;        /* Soft charcoal text */
-            --text-muted: #64748b;       /* Muted gray text */
-            --accent-color: #955251;     /* Marsala section accents */
-            --accent-soft: #fbf3f2;      /* Subtle warm tint for badges */
-            --border-color: #e8d3d1;     /* Soft warm border line */
-            --alt-card-bg: #fdf8f7;      /* Warm light tint for alternating cards */
-        }
-
+        /* Direct Color Assignments */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg-color);
+            color: #334155;
+            background-color: #955251 !important; /* Marsala outer background */
             margin: 0;
             padding: 30px 20px;
         }
@@ -34,8 +21,8 @@
         }
 
         header {
-            background-color: var(--header-bg);
-            color: var(--header-text);
+            background-color: #C58B88 !important; /* Brandied Apricot header */
+            color: #ffffff !important;
             padding: 35px 30px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -47,56 +34,57 @@
             margin: 0;
             font-size: 2.2em;
             letter-spacing: -0.5px;
+            color: #ffffff !important;
         }
 
         .subtitle {
             font-size: 1.15em;
-            color: #ffffff;
+            color: #ffffff !important;
             font-weight: 500;
             margin-top: 8px;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .contact-info {
             margin-top: 15px;
             font-size: 0.95em;
-            color: #ffffff;
+            color: #ffffff !important;
             opacity: 0.95;
         }
 
         .contact-info a {
-            color: #ffffff;
+            color: #ffffff !important;
             text-decoration: underline;
         }
 
         /* Base section styling */
         section {
-            background-color: var(--card-bg);
+            background-color: #ffffff;
             padding: 28px;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             margin-bottom: 20px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #e8d3d1;
         }
 
-        /* Automatic alternating background card depth */
+        /* Alternating background depth */
         section:nth-of-type(even) {
-            background-color: var(--alt-card-bg);
+            background-color: #fdf8f7 !important;
             border-color: #ebd7d5;
             box-shadow: inset 0 0 0 1px rgba(149, 82, 81, 0.05), 0 2px 8px rgba(0,0,0,0.04);
         }
 
         h2 {
-            border-bottom: 2px solid var(--border-color);
+            border-bottom: 2px solid #e8d3d1;
             padding-bottom: 8px;
             margin-top: 0;
-            color: var(--accent-color);
+            color: #955251 !important;
             font-size: 1.35em;
         }
 
         h3 {
             margin-bottom: 10px;
-            color: var(--accent-color);
+            color: #955251 !important;
             font-size: 1.1em;
         }
 
@@ -132,10 +120,10 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            background: var(--accent-soft);
+            background: #fbf3f2;
             padding: 12px;
             border-radius: 8px;
-            border: 1px solid var(--border-color);
+            border: 1px solid #e8d3d1;
             height: 100%;
             box-sizing: border-box;
         }
@@ -143,6 +131,8 @@
         .badge-card img {
             width: 60px;
             height: 60px;
+            max-width: 60px;
+            max-height: 60px;
             border-radius: 6px;
             object-fit: contain;
             background-color: #ffffff;
@@ -154,21 +144,21 @@
         .badge-details h4 {
             margin: 0 0 3px 0;
             font-size: 0.9em;
-            color: var(--accent-color);
+            color: #955251;
         }
 
         .badge-details p {
             margin: 0;
             font-size: 0.8em;
-            color: var(--text-muted);
+            color: #64748b;
         }
 
         /* Project Tag Badges */
         .project-tag {
             display: inline-block;
-            background: var(--accent-soft);
-            color: var(--accent-color);
-            border: 1px solid var(--border-color);
+            background: #fbf3f2;
+            color: #955251;
+            border: 1px solid #e8d3d1;
             padding: 2px 8px;
             border-radius: 4px;
             font-size: 0.8em;
@@ -181,14 +171,14 @@
         details {
             margin-top: 15px;
             background: #ffffff;
-            border: 1px solid var(--border-color);
+            border: 1px solid #e8d3d1;
             border-radius: 8px;
             padding: 12px 16px;
         }
 
         summary {
             font-weight: 600;
-            color: var(--accent-color);
+            color: #955251;
             cursor: pointer;
             user-select: none;
         }
@@ -200,7 +190,7 @@
         .details-content {
             margin-top: 15px;
             font-size: 0.92em;
-            color: var(--text-main);
+            color: #334155;
         }
 
         .details-content pre {
@@ -219,7 +209,7 @@
 
         .skill-category h4 {
             margin: 0 0 10px 0;
-            color: var(--accent-color);
+            color: #955251;
             font-size: 1em;
         }
 
@@ -269,7 +259,7 @@
         <div class="badges-grid">
             <a href="https://coursera.org/verify/specialization/W954ZKOZQ7DW" target="_blank" class="badge-link">
                 <div class="badge-card">
-                    <img src="google-ai-essentials.png" alt="Google AI Essentials Badge">
+                    <img src="google-ai-essentials.png" alt="Google AI Essentials Badge" width="60" height="60" style="max-width:60px; max-height:60px;">
                     <div class="badge-details">
                         <h4>Google AI Essentials</h4>
                         <p>Google / Coursera</p>
@@ -278,7 +268,7 @@
             </a>
 
             <div class="badge-card">
-                <img src="it-essentials.png" alt="Cisco IT Essentials Badge">
+                <img src="it-essentials.png" alt="Cisco IT Essentials Badge" width="60" height="60" style="max-width:60px; max-height:60px;">
                 <div class="badge-details">
                     <h4>IT Essentials</h4>
                     <p>Cisco Networking Academy</p>
@@ -286,7 +276,7 @@
             </div>
 
             <div class="badge-card">
-                <img src="computer-hardware-basics.png" alt="Cisco Computer Hardware Basics Badge">
+                <img src="computer-hardware-basics.png" alt="Cisco Computer Hardware Basics Badge" width="60" height="60" style="max-width:60px; max-height:60px;">
                 <div class="badge-details">
                     <h4>Computer Hardware Basics</h4>
                     <p>Cisco Networking Academy</p>
@@ -294,7 +284,7 @@
             </div>
 
             <div class="badge-card">
-                <img src="creating-compelling-reports.png" alt="Cisco Creating Compelling Reports Badge">
+                <img src="creating-compelling-reports.png" alt="Cisco Creating Compelling Reports Badge" width="60" height="60" style="max-width:60px; max-height:60px;">
                 <div class="badge-details">
                     <h4>Creating Compelling Reports</h4>
                     <p>Cisco Networking Academy</p>
@@ -341,7 +331,7 @@
             </details>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 25px 0;">
+        <hr style="border: 0; border-top: 1px solid #e8d3d1; margin: 25px 0;">
 
         <!-- PC Teardown Project -->
         <div style="margin-bottom: 25px;">
@@ -360,7 +350,7 @@
                 <li><strong>ESD & Pre-Check Protocols:</strong> Enforced electro-static discharge (ESD) safety guidelines using anti-static wrist straps and verified baseline system power prior to disassembly.</li>
                 <li><strong>Component Identification & Care:</strong> Systematically removed and inspected core components—including CPU, RAM, storage drives, power supply unit (PSU), and motherboard.</li>
                 <li><strong>Precision Reassembly:</strong> Reinstalled components according to manufacturer specification, ensuring correct cable routing, pin alignment, and seating for all expansion hardware.</li>
-                <li><strong>POST & System Verification:</strong> Booted assembled systems to confirm Power-On Self-Test (POST) success and navigated BIOS/UEFI settings to verify hardware detection.</li>
+                <li><strong>POST & System Verification:</strong> Booted assembled systems to confirm Power-On Self-Test (POST) success and navigated BIOS/UEFI settings to confirm hardware detection.</li>
             </ul>
 
             <details>
@@ -375,7 +365,7 @@
             </details>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 25px 0;">
+        <hr style="border: 0; border-top: 1px solid #e8d3d1; margin: 25px 0;">
 
         <!-- Network Diagramming Project -->
         <div>
@@ -439,7 +429,7 @@
         <h2>Experience</h2>
         <div>
             <h3>Server / Hospitality Professional</h3>
-            <p style="color: var(--text-muted); font-size: 0.9em; margin-top: -10px;">2015 – Present</p>
+            <p style="color: #64748b; font-size: 0.9em; margin-top: -10px;">2015 – Present</p>
             <ul>
                 <li>Delivered exceptional customer support in fast-paced environments, resolving client concerns with empathy and clear communication.</li>
                 <li>Operated POS hardware and digital entry platforms while handling transactions accurately under pressure.</li>
