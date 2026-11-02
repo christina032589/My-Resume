@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christina Lugo | Entry-Level IT Support Professional</title>
+    <meta name="description" content="Christina Lugo - CompTIA A+ certified IT support professional, Per Scholas graduate, valedictorian, and hands-on technology professional.">
+    <title>Christina Lugo | CompTIA A+ Certified IT Professional</title>
     <style>
+        * { box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -13,64 +15,49 @@
             margin: 0;
             padding: 30px 20px;
         }
-
-        .container {
-            max-width: 820px;
-            margin: 0 auto;
-        }
-
+        .container { max-width: 900px; margin: 0 auto; }
         header {
             background-color: #C58B88;
-            color: #ffffff;
+            color: #fff;
             padding: 35px 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
             text-align: center;
             margin-bottom: 25px;
         }
-
-        h1 {
-            margin: 0;
-            font-size: 2.2em;
-            letter-spacing: -0.5px;
-            color: #ffffff;
+        .hero {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 26px;
+            align-items: center;
+            text-align: left;
         }
-
-        .subtitle {
-            font-size: 1.15em;
-            color: #ffffff;
-            font-weight: 500;
-            margin-top: 8px;
-            opacity: 0.95;
+        .headshot {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,.85);
+            box-shadow: 0 3px 10px rgba(0,0,0,.12);
         }
-
-        .contact-info {
-            margin-top: 15px;
-            font-size: 0.95em;
-            color: #ffffff;
-            opacity: 0.95;
-        }
-
-        .contact-info a {
-            color: #ffffff;
-            text-decoration: underline;
-        }
-
+        h1 { margin: 0; font-size: 2.25em; letter-spacing: -.5px; color: #fff; }
+        .subtitle { font-size: 1.12em; color: #fff; font-weight: 600; margin-top: 6px; }
+        .hero-note { margin: 8px 0 0; color: #fff; opacity: .95; font-size: .95em; }
+        .contact-info { margin-top: 14px; font-size: .93em; color: #fff; }
+        .contact-info a { color: #fff; text-decoration: underline; }
         section {
-            background-color: #ffffff;
+            background-color: #fff;
             padding: 28px;
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 8px rgba(0,0,0,.04);
             margin-bottom: 20px;
             border: 1px solid #e8d3d1;
         }
-
         section:nth-of-type(even) {
             background-color: #fdf8f7;
             border-color: #ebd7d5;
-            box-shadow: inset 0 0 0 1px rgba(149, 82, 81, 0.05), 0 2px 8px rgba(0,0,0,0.04);
+            box-shadow: inset 0 0 0 1px rgba(149,82,81,.05), 0 2px 8px rgba(0,0,0,.04);
         }
-
         h2 {
             border-bottom: 2px solid #e8d3d1;
             padding-bottom: 8px;
@@ -78,228 +65,265 @@
             color: #955251;
             font-size: 1.35em;
         }
-
-        h3 {
-            margin-bottom: 10px;
-            color: #955251;
-            font-size: 1.1em;
+        h3 { margin-bottom: 10px; color: #955251; font-size: 1.1em; }
+        h4 { color: #955251; }
+        ul { padding-left: 20px; margin-bottom: 0; }
+        li { margin-bottom: 8px; }
+        .highlight-grid, .skills-grid, .people-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
         }
-
-        ul {
-            padding-left: 20px;
-            margin-bottom: 0;
+        .highlight-card, .people-card {
+            background: #fbf3f2;
+            border: 1px solid #e8d3d1;
+            border-radius: 8px;
+            padding: 16px;
         }
-
-        li {
-            margin-bottom: 8px;
-        }
-
+        .highlight-card strong, .people-card strong { color: #955251; }
+        .people-card p { margin: 6px 0 0; font-size: .9em; }
         .badges-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 15px;
             margin-top: 15px;
         }
-
-        .badge-link {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .badge-link:hover {
-            transform: translateY(-2px);
-        }
-
+        .badge-link { text-decoration: none; color: inherit; display: block; transition: transform .2s ease; }
+        .badge-link:hover { transform: translateY(-2px); }
         .badge-card {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: #fbf3f2;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #e8d3d1;
-            height: 100%;
-            box-sizing: border-box;
+            display: flex; align-items: center; gap: 12px;
+            background: #fbf3f2; padding: 12px; border-radius: 8px;
+            border: 1px solid #e8d3d1; height: 100%;
         }
-
         .badge-card img {
-            width: 60px;
-            height: 60px;
-            border-radius: 6px;
-            object-fit: contain;
-            background-color: #ffffff;
-            padding: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            width: 60px; height: 60px; border-radius: 6px; object-fit: contain;
+            background: #fff; padding: 4px; box-shadow: 0 1px 3px rgba(0,0,0,.1);
             flex-shrink: 0;
         }
-
-        .badge-details h4 {
-            margin: 0 0 3px 0;
-            font-size: 0.9em;
-            color: #955251;
+        .badge-icon {
+            width: 60px; height: 60px; border-radius: 6px; background: #955251;
+            color: #fff; display: grid; place-items: center; font-size: 1.7em; flex-shrink: 0;
         }
-
-        .badge-details p {
-            margin: 0;
-            font-size: 0.8em;
-            color: #64748b;
-        }
-
+        .badge-details h4 { margin: 0 0 3px; font-size: .9em; }
+        .badge-details p { margin: 0; font-size: .8em; color: #64748b; }
+        .project { margin-bottom: 25px; }
         .project-tag {
-            display: inline-block;
-            background: #fbf3f2;
-            color: #955251;
-            border: 1px solid #e8d3d1;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            font-weight: 600;
-            margin-right: 6px;
-            margin-bottom: 8px;
+            display: inline-block; background: #fbf3f2; color: #955251;
+            border: 1px solid #e8d3d1; padding: 2px 8px; border-radius: 4px;
+            font-size: .8em; font-weight: 600; margin-right: 6px; margin-bottom: 8px;
         }
-
         details {
-            margin-top: 15px;
-            background: #ffffff;
-            border: 1px solid #e8d3d1;
-            border-radius: 8px;
-            padding: 12px 16px;
+            margin-top: 15px; background: #fff; border: 1px solid #e8d3d1;
+            border-radius: 8px; padding: 12px 16px;
         }
-
-        summary {
-            font-weight: 600;
-            color: #955251;
-            cursor: pointer;
-            user-select: none;
+        summary { font-weight: 600; color: #955251; cursor: pointer; user-select: none; }
+        summary:hover { text-decoration: underline; }
+        .details-content { margin-top: 15px; font-size: .92em; color: #334155; }
+        .details-content img, .achievement-photo, .training-photo {
+            max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e8d3d1;
+            margin-top: 10px; box-shadow: 0 2px 6px rgba(0,0,0,.06);
         }
-
-        summary:hover {
-            text-decoration: underline;
+        .achievement-photo { max-height: 650px; width: 100%; object-fit: contain; background: #f8fafc; }
+        .training-photo { max-height: 620px; width: 100%; object-fit: cover; }
+        .pdf-viewer { width: 100%; height: 520px; border: 1px solid #e8d3d1; border-radius: 6px; margin-top: 12px; }
+        .button-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+        .button {
+            display: inline-block; background: #955251; color: #fff; text-decoration: none;
+            padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: .85em;
         }
-
-        .details-content {
-            margin-top: 15px;
-            font-size: 0.92em;
-            color: #334155;
-        }
-
-        .details-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px;
-            border: 1px solid #e8d3d1;
-            margin-top: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-        }
-
-        .pdf-viewer {
-            width: 100%;
-            height: 450px;
-            border: 1px solid #e8d3d1;
-            border-radius: 6px;
-            margin-top: 12px;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-category h4 {
-            margin: 0 0 10px 0;
-            color: #955251;
-            font-size: 1em;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.85em;
-            color: #ffffff;
-            opacity: 0.8;
-            margin-top: 35px;
+        .button:hover { opacity: .9; }
+        .skill-category h4 { margin: 0 0 10px; color: #955251; font-size: 1em; }
+        hr { border: 0; border-top: 1px solid #e8d3d1; margin: 25px 0; }
+        footer { text-align: center; font-size: .85em; color: #fff; opacity: .85; margin-top: 35px; }
+        @media (max-width: 650px) {
+            body { padding: 16px 10px; }
+            header, section { padding: 22px 18px; }
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .headshot { margin: 0 auto; }
+            h1 { font-size: 2em; }
+            .pdf-viewer { height: 400px; }
         }
     </style>
 </head>
 <body>
-
 <div class="container">
 
-    <!-- Header Section -->
     <header>
-        <h1>Christina Lugo</h1>
-        <div class="subtitle">Aspiring IT Support Specialist</div>
-        <div class="contact-info">
-            Levittown, PA | 
-            <a href="mailto:lugo.christina.m@gmail.com">Email Me</a> | 
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+        <div class="hero">
+            <img src="christina-headshot.jpg" alt="Professional headshot of Christina Lugo" class="headshot">
+            <div>
+                <h1>Christina Lugo</h1>
+                <div class="subtitle">CompTIA A+ Certified | IT Support Professional | Per Scholas Graduate</div>
+                <p class="hero-note">Valedictorian • Core Values Award Recipient • 600+ Hours of Hands-On IT Training</p>
+                <div class="contact-info">
+                    Levittown, PA |
+                    <a href="mailto:lugo.christina.m@gmail.com">Email Me</a> |
+                    <a href="https://www.linkedin.com/in/christina-lugo/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+                    <a href="https://github.com/christina032589" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- Section 1 -->
     <section>
         <h2>About Me</h2>
         <p>
-            Dependable customer service professional with 10 years of fast-paced problem-solving experience, transitioning into Information Technology. A naturally hands-on technician who builds and customizes personal gaming PCs, bringing a strong baseline of hardware troubleshooting, adaptability, and user communication to entry-level IT Support.
+            I am a CompTIA A+ certified IT professional and graduate of the Per Scholas AI-Enabled IT Support program,
+            where I completed more than 600 hours of hands-on technical training. My training included Windows systems,
+            Windows Server, Active Directory, Group Policy, networking, Linux, ServiceNow, cybersecurity fundamentals,
+            cloud concepts, hardware, troubleshooting, and technical documentation.
+        </p>
+        <p>
+            Before transitioning into technology, I spent more than 10 years in hospitality. That experience taught me
+            how to listen, communicate clearly, solve problems under pressure, manage competing priorities, work with
+            many different personalities, and make people feel supported. I now bring those strengths into IT alongside
+            my technical training and genuine curiosity about how technology works.
+        </p>
+        <p>
+            I enjoy hands-on troubleshooting, learning new systems, and finding practical solutions. I am especially
+            interested in opportunities where I can continue developing in IT support, systems, networking, cloud,
+            infrastructure, and cybersecurity.
         </p>
     </section>
 
-    <!-- Section 2 -->
     <section>
-        <h2>Education & Certifications</h2>
-        <ul>
-            <li><strong>Google AI Essentials Specialization</strong> – Google / Coursera (Completed July 2026)</li>
-            <li><strong>CompTIA A+ Certification Training</strong> – Currently Enrolled, Per Scholas</li>
-            <li><strong>Get Started with Microsoft 365 Copilot</strong> – Microsoft Learn (Completed July 2026)</li>
-            <li><strong>High School Diploma</strong> – Brooklyn, NY</li>
-        </ul>
+        <h2>Education, Certifications & Achievements</h2>
 
-        <h3 style="margin-top: 20px;">Badges & Achievements</h3>
+        <div class="highlight-grid">
+            <div class="highlight-card">
+                <strong>CompTIA A+ Certified</strong><br>
+                Earned October 2026<br>
+                <small>Valid through October 2029</small>
+            </div>
+            <div class="highlight-card">
+                <strong>Per Scholas Graduate</strong><br>
+                AI-Enabled IT Support<br>
+                <small>600+ hours of hands-on training</small>
+            </div>
+            <div class="highlight-card">
+                <strong>Valedictorian</strong><br>
+                Per Scholas Philadelphia<br>
+                <small>Class of 2026</small>
+            </div>
+            <div class="highlight-card">
+                <strong>Core Values Award</strong><br>
+                Per Scholas<br>
+                <small>Class of 2026</small>
+            </div>
+        </div>
+
+        <details>
+            <summary>View CompTIA A+ certification</summary>
+            <div class="details-content">
+                <p>
+                    CompTIA A+ certification earned after successfully completing the Core 1 (220-1201)
+                    and Core 2 (220-1202) certification exams.
+                </p>
+                <iframe src="comptia-a-plus-certificate.pdf" class="pdf-viewer" title="CompTIA A+ Certificate"></iframe>
+                <div class="button-row">
+                    <a href="comptia-a-plus-certificate.pdf" target="_blank" rel="noopener noreferrer" class="button">↗ Open A+ Certificate</a>
+                    <a href="https://verify.comptia.org/" target="_blank" rel="noopener noreferrer" class="button">↗ CompTIA Verification</a>
+                </div>
+            </div>
+        </details>
+
+        <details>
+            <summary>View Per Scholas graduation & Valedictorian achievement</summary>
+            <div class="details-content">
+                <p>
+                    Graduated from the Per Scholas AI-Enabled IT Support program after completing 600+ hours of
+                    technical training. I was honored to be named Valedictorian and to receive the Per Scholas
+                    Core Values Award.
+                </p>
+                <img src="valedictorian-award.jpg" alt="Christina Lugo receiving her Per Scholas Valedictorian award" class="achievement-photo">
+                <h4>Certificate of Completion</h4>
+                <img src="per-scholas-certificate.jpg" alt="Per Scholas IT Support Training Certificate of Completion for Christina Lugo" class="achievement-photo">
+            </div>
+        </details>
+
+        <details>
+            <summary>View hands-on Per Scholas training</summary>
+            <div class="details-content">
+                <p>
+                    My training combined technical instruction with hands-on labs, troubleshooting exercises,
+                    team projects, system administration, networking, and real-world support scenarios.
+                </p>
+                <img src="per-scholas-hands-on.jpg" alt="Christina Lugo and classmates working in a technical lab beside networking equipment" class="training-photo">
+            </div>
+        </details>
+
+        <h3 style="margin-top:24px;">Additional Certifications & Badges</h3>
         <div class="badges-grid">
             <a href="https://coursera.org/verify/specialization/W954ZKOZQ7DW" target="_blank" rel="noopener noreferrer" class="badge-link">
                 <div class="badge-card">
                     <img src="google-ai-essentials.png" alt="Google AI Essentials Badge">
-                    <div class="badge-details">
-                        <h4>Google AI Essentials</h4>
-                        <p>Google / Coursera</p>
-                    </div>
+                    <div class="badge-details"><h4>Google AI Essentials</h4><p>Google / Coursera</p></div>
                 </div>
             </a>
-
             <div class="badge-card">
                 <img src="it-essentials.png" alt="Cisco IT Essentials Badge">
-                <div class="badge-details">
-                    <h4>IT Essentials</h4>
-                    <p>Cisco Networking Academy</p>
-                </div>
+                <div class="badge-details"><h4>IT Essentials</h4><p>Cisco Networking Academy</p></div>
             </div>
-
             <div class="badge-card">
                 <img src="computer-hardware-basics.png" alt="Cisco Computer Hardware Basics Badge">
-                <div class="badge-details">
-                    <h4>Computer Hardware Basics</h4>
-                    <p>Cisco Networking Academy</p>
-                </div>
+                <div class="badge-details"><h4>Computer Hardware Basics</h4><p>Cisco Networking Academy</p></div>
             </div>
-
             <div class="badge-card">
                 <img src="creating-compelling-reports.png" alt="Cisco Creating Compelling Reports Badge">
-                <div class="badge-details">
-                    <h4>Creating Compelling Reports</h4>
-                    <p>Cisco Networking Academy</p>
-                </div>
+                <div class="badge-details"><h4>Creating Compelling Reports</h4><p>Cisco Networking Academy</p></div>
+            </div>
+            <div class="badge-card">
+                <div class="badge-icon">A+</div>
+                <div class="badge-details"><h4>CompTIA A+</h4><p>Certified October 2026</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Section 3 -->
     <section>
-        <h2>Featured Projects & AI Simulations</h2>
-        
-        <!-- DDoS Project -->
-        <div style="margin-bottom: 25px;">
+        <h2>Featured Projects & Hands-On Technical Work</h2>
+
+        <div class="project">
+            <h3>Charlie’s Angels — Migration & Stabilization Capstone</h3>
+            <div>
+                <span class="project-tag">Windows Server 2022</span>
+                <span class="project-tag">Windows 11</span>
+                <span class="project-tag">Active Directory</span>
+                <span class="project-tag">DNS</span>
+                <span class="project-tag">Group Policy</span>
+                <span class="project-tag">VirtualBox</span>
+                <span class="project-tag">Troubleshooting</span>
+                <span class="project-tag">Incident Resolution</span>
+            </div>
+            <p>
+                Collaborated on a migration and stabilization capstone that simulated an enterprise IT environment.
+                Our team configured a Windows Server 2022 domain controller and Windows 11 client in a virtualized
+                network, then investigated six post-migration incidents affecting authentication, shared resources,
+                Group Policy, printing, system performance, and file access.
+            </p>
+            <details>
+                <summary>Click to view project details & presentation</summary>
+                <div class="details-content">
+                    <h4>Environment & Responsibilities</h4>
+                    <ul>
+                        <li>Created a virtual lab using VirtualBox with Windows Server 2022 and Windows 11.</li>
+                        <li>Worked with Active Directory Domain Services, DNS, domain users/groups, and shared network resources.</li>
+                        <li>Investigated incidents involving file permissions, domain logon, Group Policy, printer availability, performance, and intermittent file access.</li>
+                        <li>Used evidence from Windows tools, services, connectivity tests, permissions, and system configuration to investigate issues.</li>
+                        <li>Applied corrective actions where appropriate, retested services, documented findings, and communicated unresolved risks.</li>
+                        <li>Presented technical findings and an executive summary as a team.</li>
+                    </ul>
+                    <iframe src="charlies-angels-capstone.pdf" class="pdf-viewer" title="Charlie's Angels Capstone Presentation"></iframe>
+                    <div class="button-row">
+                        <a href="charlies-angels-capstone.pdf" target="_blank" rel="noopener noreferrer" class="button">↗ Open Capstone PDF</a>
+                        <a href="https://canva.link/nddwlxg6qp5rm1v" target="_blank" rel="noopener noreferrer" class="button">↗ View in Canva</a>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+        <hr>
+
+        <div class="project">
             <h3>DDoS Incident Response & AI Collaboration Simulation</h3>
             <div>
                 <span class="project-tag">Log Analysis</span>
@@ -307,35 +331,29 @@
                 <span class="project-tag">Prompt Engineering</span>
                 <span class="project-tag">Incident Response</span>
             </div>
-            <p style="margin-top: 8px;">
-                Simulated a live Junior Network Engineer response to a TCP SYN Flood DDoS attack targeting game infrastructure. Used Generative AI to rapidly parse firewall/flow logs, accelerate response planning, and design an actionable 3-day mitigation roadmap.
+            <p>
+                Simulated a Junior Network Engineer response to a TCP SYN Flood DDoS attack targeting game
+                infrastructure. Used generative AI to accelerate log analysis and response planning while applying
+                human review and networking knowledge to validate and refine the output.
             </p>
-            <ul>
-                <li><strong>Log Anomaly Identification:</strong> Recognized TCP SYN flag ([S]) floods originating from distributed IPs at 14,000–21,000 packets/sec on port 80.</li>
-                <li><strong>Human-in-the-Loop Optimization:</strong> Refined raw AI output to add enterprise-level technical mitigations (SYN cookies, BGP RTBH, cloud scrubbing) and Cisco/Linux CLI block rules.</li>
-                <li><strong>Resource & Operations Management:</strong> Iteratively prompted AI to construct a 3-day team timeline delegating tasks across 10 engineers, alongside player morale & communication strategies.</li>
-                <li><strong>Efficiency Impact:</strong> Estimated 2–3 hours saved during incident analysis by leveraging AI for initial triage while validating outputs with core networking knowledge.</li>
-            </ul>
-
             <details>
-                <summary>Click to view full prompt logs & reflection report</summary>
+                <summary>Click to view prompt strategy & reflection</summary>
                 <div class="details-content">
-                    <h4>Prompting Strategy & Iteration Log</h4>
-                    <p><strong>Prompt 1 (Initial Analysis):</strong> Directed AI as a Junior Network Engineer to analyze raw TCP flow logs, identify attack anomalies, evaluate bandwidth/resource impact, and propose immediate CLI fixes.</p>
-                    <p><strong>Prompt 2 (Refinement & Operations):</strong> Iterated on basic AI output to expand mitigation steps (SYN cookies, BGP blackholing, Cloud scrubbing), build a 10-engineer 3-day response schedule, and draft player morale protection plans.</p>
-                    
-                    <h4>Reflection & Efficiency Gain</h4>
+                    <h4>Prompting Strategy & Iteration</h4>
+                    <p><strong>Initial Analysis:</strong> Directed AI to analyze TCP flow logs, identify attack anomalies, evaluate resource impact, and propose immediate mitigations.</p>
+                    <p><strong>Refinement:</strong> Expanded the response to include mitigation options, team task planning, and communication considerations.</p>
+                    <h4>Reflection</h4>
                     <p>
-                        Utilizing AI for log parsing saved an estimated 2 to 3 hours of manual log review. While AI generated a fast baseline draft, technical human oversight was critical to ensure firewall commands, team allocations, and enterprise network architecture were realistic and accurate.
+                        AI accelerated initial log review and helped organize a response plan, but technical human
+                        oversight remained necessary to validate recommendations and keep the response realistic.
                     </p>
                 </div>
             </details>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid #e8d3d1; margin: 25px 0;">
+        <hr>
 
-        <!-- PC Teardown Project -->
-        <div style="margin-bottom: 25px;">
+        <div class="project">
             <h3>In-Person PC Teardown & Hardware Reassembly Lab</h3>
             <div>
                 <span class="project-tag">Hardware Diagnostics</span>
@@ -344,131 +362,155 @@
                 <span class="project-tag">BIOS Verification</span>
                 <span class="project-tag">Team Collaboration</span>
             </div>
-            <p style="margin-top: 8px;">
-                Collaborated in a technical workgroup to perform a complete hardware disassembly, component inspection, and full reassembly of desktop computers in a live lab environment.
+            <p>
+                Collaborated in a technical workgroup to perform complete hardware disassembly, component inspection,
+                and reassembly of desktop computers in a live lab environment.
             </p>
-            <ul>
-                <li><strong>ESD & Pre-Check Protocols:</strong> Enforced electro-static discharge (ESD) safety guidelines using anti-static wrist straps and verified baseline system power prior to disassembly.</li>
-                <li><strong>Component Identification & Care:</strong> Systematically removed and inspected core components—including CPU, RAM, storage drives, power supply unit (PSU), and motherboard.</li>
-                <li><strong>Precision Reassembly:</strong> Reinstalled components according to manufacturer specification, ensuring correct cable routing, pin alignment, and seating for all expansion hardware.</li>
-                <li><strong>POST & System Verification:</strong> Booted assembled systems to confirm Power-On Self-Test (POST) success and navigated BIOS/UEFI settings to confirm hardware detection.</li>
-            </ul>
-
             <details>
-                <summary>Click to view team workflow & safety summary</summary>
+                <summary>Click to view team workflow & presentation</summary>
                 <div class="details-content">
-                    <h4>Team Dynamics & Lab Workflow</h4>
-                    <p><strong>Workgroup Pair:</strong> Mikail & Christina</p>
-                    <p>
-                        Divided tasks effectively between physical disassembly, component specification logging, and diagnostic testing. Documented each step of the build to ensure proper re-cabling and component integrity.
-                    </p>
-                    <h4>Lab Presentation & Documentation</h4>
-                    <p>View presentation embedded below or open directly:</p>
-
-                    <!-- Embedded PDF Viewer -->
-                    <iframe src="https://docs.google.com/viewer?url=https://christina032589.github.io/My-Resume/pc-teardown-lab.pdf&embedded=true" class="pdf-viewer"></iframe>
-
-                    <p style="margin-top: 10px;">
-                        <a href="pc-teardown-lab.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #955251; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-weight: 600; font-size: 0.85em;">
-                            ↗ Open PDF in New Tab
-                        </a>
-                    </p>
+                    <ul>
+                        <li>Followed ESD safety procedures and verified baseline system power before disassembly.</li>
+                        <li>Removed and inspected CPU, RAM, storage, PSU, motherboard, and related components.</li>
+                        <li>Reassembled systems with attention to cable routing, alignment, and component seating.</li>
+                        <li>Verified successful POST and confirmed hardware detection in BIOS/UEFI.</li>
+                    </ul>
+                    <iframe src="https://docs.google.com/viewer?url=https://christina032589.github.io/My-Resume/pc-teardown-lab.pdf&embedded=true" class="pdf-viewer" title="PC Teardown Lab Presentation"></iframe>
+                    <div class="button-row">
+                        <a href="pc-teardown-lab.pdf" target="_blank" rel="noopener noreferrer" class="button">↗ Open PDF</a>
+                    </div>
                 </div>
             </details>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid #e8d3d1; margin: 25px 0;">
+        <hr>
 
-        <!-- Power Supply Unit (PSU) Diagram Lab -->
-        <div style="margin-bottom: 25px;">
+        <div class="project">
             <h3>Power Supply Unit (PSU) Architecture & Pinout Presentation Lab</h3>
             <div>
                 <span class="project-tag">Hardware Architecture</span>
                 <span class="project-tag">PSU Pinouts</span>
                 <span class="project-tag">Voltage Regulation</span>
                 <span class="project-tag">Technical Presentation</span>
-                <span class="project-tag">Team Collaboration</span>
             </div>
-            <p style="margin-top: 8px;">
-                Collaborated with a technical group to research, map, and present power supply unit (PSU) architecture, connector pinouts, and voltage delivery rails for desktop computing environments.
+            <p>
+                Collaborated with a technical group to research, map, and present PSU architecture, connector pinouts,
+                voltage delivery rails, and safety considerations for desktop computing environments.
             </p>
-            <ul>
-                <li><strong>PSU Pinout Analysis:</strong> Mapped standard 24-pin ATX motherboard power connectors, 4/8-pin CPU power rail specs, and PCIe expansion power lines.</li>
-                <li><strong>Voltage Rails & Specs:</strong> Documented target voltage tolerances (+3.3V, +5V, +12V) and safety protocols for power testing and troubleshooting.</li>
-                <li><strong>Visual Diagramming & Slides:</strong> Created structured technical presentation slides detailing PSU cabling, modular configurations, and form factor standards.</li>
-            </ul>
-
             <details>
                 <summary>Click to view PSU presentation & documentation</summary>
                 <div class="details-content">
-                    <h4>PSU Architecture Presentation</h4>
-                    <p>View presentation embedded below or open directly:</p>
-
-                    <!-- Embedded PDF Viewer -->
-                    <iframe src="https://docs.google.com/viewer?url=https://christina032589.github.io/My-Resume/psu-diagram.pdf&embedded=true" class="pdf-viewer"></iframe>
-
-                    <p style="margin-top: 10px;">
-                        <a href="psu-diagram.pdf" target="_blank" rel="noopener noreferrer" style="display: inline-block; background-color: #955251; color: #ffffff; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-weight: 600; font-size: 0.85em;">
-                            ↗ Open PDF in New Tab
-                        </a>
-                    </p>
+                    <ul>
+                        <li>Mapped standard 24-pin ATX, CPU power, and PCIe power connections.</li>
+                        <li>Documented +3.3V, +5V, and +12V rails and safe troubleshooting considerations.</li>
+                        <li>Created technical presentation material explaining cabling, modular configurations, and form factors.</li>
+                    </ul>
+                    <iframe src="https://docs.google.com/viewer?url=https://christina032589.github.io/My-Resume/psu-diagram.pdf&embedded=true" class="pdf-viewer" title="PSU Architecture Presentation"></iframe>
+                    <div class="button-row">
+                        <a href="psu-diagram.pdf" target="_blank" rel="noopener noreferrer" class="button">↗ Open PDF</a>
+                    </div>
                 </div>
             </details>
         </div>
     </section>
 
-    <!-- Section 4 -->
     <section>
-        <h2>Skills</h2>
+        <h2>Technical Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h4>Technical & Systems</h4>
+                <h4>Systems & Administration</h4>
                 <ul>
-                    <li>PC Building & Hardware Setup</li>
-                    <li>Microsoft Office / Google Workspace</li>
-                    <li>Basic Operating System Troubleshooting</li>
-                    <li>POS Systems & Software Basics</li>
+                    <li>Windows 10 & Windows 11</li>
+                    <li>Windows Server 2022</li>
+                    <li>Active Directory & Group Policy</li>
+                    <li>User, Group & Permissions Administration</li>
+                    <li>Windows Administrative Tools & Event Viewer</li>
+                    <li>Linux Fundamentals</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h4>Support & Interpersonal</h4>
+                <h4>Networking & Infrastructure</h4>
                 <ul>
-                    <li>Customer Service & Active Listening</li>
-                    <li>Conflict Resolution & Calm Problem-Solving</li>
-                    <li>Team Collaboration & Multitasking</li>
-                    <li>Adaptability & Quick Learning</li>
+                    <li>TCP/IP & IP Addressing</li>
+                    <li>DNS & DHCP</li>
+                    <li>LAN/WAN Fundamentals</li>
+                    <li>Network Connectivity Troubleshooting</li>
+                    <li>Ethernet Cabling (T568A/T568B)</li>
+                    <li>VirtualBox & Virtual Environments</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Support & Enterprise Tools</h4>
+                <ul>
+                    <li>ServiceNow</li>
+                    <li>Technical Troubleshooting</li>
+                    <li>Incident Documentation</li>
+                    <li>Microsoft 365 / Office</li>
+                    <li>Google Workspace</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h4>Hardware & Security Foundations</h4>
+                <ul>
+                    <li>PC Assembly & Hardware Diagnostics</li>
+                    <li>CPU, RAM, SSD/HDD & PSU Installation</li>
+                    <li>BIOS/UEFI</li>
+                    <li>Cybersecurity Fundamentals</li>
+                    <li>Access Control & Authentication Concepts</li>
+                    <li>AI Productivity & Support Tools</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Section 5 -->
     <section>
-        <h2>Experience</h2>
-        <div>
-            <h3>Server / Hospitality Professional</h3>
-            <p style="color: #64748b; font-size: 0.9em; margin-top: -10px;">2015 – Present</p>
-            <ul>
-                <li>Delivered exceptional customer support in fast-paced environments, resolving client concerns with empathy and clear communication.</li>
-                <li>Operated POS hardware and digital entry platforms while handling transactions accurately under pressure.</li>
-                <li>Collaborated closely with cross-functional team members to maintain high operational efficiency and smooth daily workflows.</li>
-            </ul>
+        <h2>People Skills I Bring to IT</h2>
+        <p>
+            More than 10 years in hospitality taught me that great support is about more than fixing the immediate
+            problem. It is also about listening, communicating clearly, earning trust, and helping someone through
+            a frustrating situation. Those skills now shape the way I approach technical support.
+        </p>
+        <div class="people-grid">
+            <div class="people-card"><strong>Communication & Active Listening</strong><p>Listen carefully, ask useful questions, and explain information clearly to people with different needs and communication styles.</p></div>
+            <div class="people-card"><strong>Problem Solving</strong><p>Identify what is going wrong, work through possible solutions, and know when an issue needs to be escalated.</p></div>
+            <div class="people-card"><strong>Customer Support</strong><p>Bring patience, empathy, professionalism, and a focus on making users feel heard while working toward a solution.</p></div>
+            <div class="people-card"><strong>Working Under Pressure</strong><p>Stay calm, organized, and accurate while managing many requests and changing priorities in fast-paced environments.</p></div>
+            <div class="people-card"><strong>Adaptability</strong><p>Adjust quickly when circumstances change, information is incomplete, or the original plan no longer works.</p></div>
+            <div class="people-card"><strong>Teamwork</strong><p>Communicate and coordinate across teams because successful problem resolution often depends on collaboration.</p></div>
+            <div class="people-card"><strong>Attention to Detail</strong><p>Check details, maintain accuracy, and follow through because small mistakes can create much larger problems.</p></div>
+            <div class="people-card"><strong>Relationship Building</strong><p>Build trust through reliability, patience, consistency, and approachable communication.</p></div>
+            <div class="people-card"><strong>Time Management & Prioritization</strong><p>Recognize what needs immediate attention, what can wait, and how to keep multiple responsibilities moving.</p></div>
         </div>
     </section>
 
-    <!-- Section 6 -->
+    <section>
+        <h2>Professional Experience</h2>
+        <h3>Server / Hospitality Professional</h3>
+        <p style="color:#64748b;font-size:.9em;margin-top:-10px;">2015 – Present</p>
+        <ul>
+            <li>Provide customer service in fast-paced environments while managing multiple priorities and maintaining accuracy.</li>
+            <li>Identify customer concerns, gather information, determine appropriate solutions, and escalate issues when necessary.</li>
+            <li>Communicate clearly between customers and internal teams to resolve problems and maintain efficient operations.</li>
+            <li>Operate proprietary POS systems and troubleshoot basic terminal or endpoint issues during peak operating periods.</li>
+            <li>Manage the needs of up to 30 customers while prioritizing urgent requests and maintaining a positive service experience.</li>
+            <li>Collaborate with team members, adapt quickly to changing conditions, and remain calm under pressure.</li>
+            <li>Build long-term customer relationships through reliability, patience, professionalism, and consistent service.</li>
+        </ul>
+    </section>
+
     <section>
         <h2>Hands-On Interests</h2>
         <p>
-            Outside of formal training, I am passionate about desktop hardware. I actively build and optimize custom gaming PCs for myself and friends, exploring hardware capabilities, testing performance limits, and troubleshooting system components.
+            Outside of formal training, I enjoy building and optimizing custom gaming PCs for myself and friends.
+            I like exploring hardware capabilities, testing performance, troubleshooting system components, and
+            continuing to learn how systems work beyond the classroom.
         </p>
     </section>
 
     <footer>
         <p>&copy; 2026 Christina Lugo. Built for GitHub Pages.</p>
     </footer>
-
 </div>
-
 </body>
 </html>
